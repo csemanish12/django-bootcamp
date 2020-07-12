@@ -1,0 +1,5 @@
+Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain
+how prototype chains work and look at how the prototype property can be used to add methods to existing constructors
+
+Note: We want to reiterate that the methods and properties are not copied from one object to another in the prototype
+chain. They are accessed by walking up the chain as described above.

@@ -1,0 +1,24 @@
+When an object instance is created from a class, the class's constructor function is run to create it.
+This process of creating an object instance from a class is called instantiation — the object instance
+is instantiated from the class.
+
+Note: The fancy word for the ability of multiple object types to implement the same functionality is polymorphism.
+Just in case you were wondering.
+
+Constructors and object instances
+JavaScript uses special functions called constructor functions to define and initialize objects and their features.
+They are useful because you'll often come across situations in which you don't know how many objects you will be
+creating; constructors provide the means to create as many objects as you need in an effective way, attaching data
+and functions to them as required.
+
+function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}
+The constructor function is JavaScript's version of a class. Notice that it has all the features you'd expect in a
+function, although it doesn't return anything or explicitly create an object — it basically just defines properties
+and methods. Notice also the this keyword being used here as well — it is basically saying that whenever one of these
+object instances is created, the object's name property will be equal to the name value passed to the constructor
+call, and the greeting() method will use the name value passed to the constructor call too
