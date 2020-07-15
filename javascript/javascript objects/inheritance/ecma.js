@@ -26,7 +26,22 @@ constructor(first, last, age, gender, interests){
 class Teacher extends Person{
   constructor(first, last, age, gender, interests, subject, grade){
   super(first, last, age, gender, interests); //now this is initialized by calling parent constructor
-  this.subject = subject;
+  this._subject = subject;
   this.grade = grade;
   }
+
+  get subject(){
+  return this._subject;
+  }
+
+  set subject(newSubject){
+  this._subject = newSubject;
+  }
 }
+// We use _ to create a separate value in which to store our name property. Without using this convention, we would
+//get errors every time we called get or set.
+
+/*
+Note: Because of the way JavaScript works, with the prototype chain, etc., the sharing of functionality between
+objects is often called delegation. Specialized objects delegate functionality to a generic object type.
+*/
