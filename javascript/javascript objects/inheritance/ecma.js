@@ -22,3 +22,11 @@ constructor(first, last, age, gender, interests){
  console.log(`${this.name.first} has left`);
  };
 }
+
+class Teacher extends Person{
+  constructor(first, last, age, gender, interests, subject, grade){
+  super(first, last, age, gender, interests); //now this is initialized by calling parent constructor
+  this.subject = subject;
+  this.grade = grade;
+  }
+}
